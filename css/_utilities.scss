@@ -1,0 +1,32 @@
+
+section{
+
+    font-family: 'Poppins', sans-serif;
+        .title{
+        font-family: $font-secondary;
+        font-size: calc(1.2rem + 1vw);
+        font-weight: 300;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        position: relative;
+        width: 35%;
+        text-align: left;
+        color: $color-text;
+        line-height: 1.4;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 10.5rem;
+            height: .1rem;
+            background-color: $color-text;
+            left: 0;
+            bottom: 0;
+            // transform: translateX(-20%);
+        }
+      
+        }
+}
+
+
+    
