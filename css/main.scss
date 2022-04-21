@@ -127,6 +127,7 @@ img {
   font-family: 'Ubuntu', sans-serif;
   margin: 0 auto;
   padding-top: 1rem;
+  animation: transitionIn .3s ease;
 
   .max-width {
     text-align: center;
@@ -139,10 +140,12 @@ img {
     margin-top: 2rem;
     .smiley{
       font-size: calc(3.5rem + 2vw);
+      animation: transitionIn 1.3s ease;
     }
     .text-1 {
       font-size: calc(1.5rem + 1.5vw);
       margin: .5rem auto;
+      animation: transitionIn 1.2s ease;
     }
     .text-2 {
       font-size: calc(3rem + 2vw);
@@ -150,13 +153,17 @@ img {
       margin-left: -3px;
       text-align: center;
       margin: .5rem auto;
+      animation: transitionIn .8s ease;
     }
     .text-3 {
       font-size: calc(2rem + 1.5vw);
       margin: 5px 0;
+      animation: transitionIn .9s ease;
       span {
         color: $primary-color;
-        font-weight: 500;
+        font-weight: 500; 
+        animation: transitionIn .8s ease;
+
       }
     }
     .subtitle{
@@ -164,13 +171,16 @@ img {
       margin: 2rem 0;
       font-weight: 300;
       line-height: 1.6;
+      animation: transitionIn 1s ease;
     }
     a {
       @extend %btn;
       margin-right: 1rem;
       position: relative;
       margin-bottom: .5rem;
+      animation: bottomToTop 1.4s ease;
     }
+   
     .right{
       &::after{
         content: '';
@@ -182,7 +192,11 @@ img {
         background-color: #f7f7f7;
       }
     }
+    .buttons {
+      animation: bottomToTop .10s ease-in;
+    }
   }
+
 }
 
 // WEB PRESENCE
@@ -193,6 +207,14 @@ section {
   font-family: $font-primary;
   background: #f7f7f7;
   padding: 100px 60px;
+  position: relative;
+  transition: .5s ease-in;
+  scroll-behavior: smooth;
+  &.reveal{
+    transition: 2s all ease;
+    // opacity: 0;
+    // transform: translateY(-150px);
+  }
 
   .about-content {
     p {
@@ -544,7 +566,42 @@ footer {
     }
   }
 }
+.home {
+  // animation: transitionIn .5s ease;
+}
+.buttons{
+  animation: bottomToTop 1.4s ease-in;
+}
 
+// ANIMATIONS
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+}
+@keyframes bottomToTop {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes scroll {
+  from {
+
+  }
+  to {
+
+  }
+}
 // MEDIA QUERIES
 
 @media (max-width: 1300px) {
@@ -971,11 +1028,14 @@ footer {
       }
       a{
         display: block;
+        z-index: 1;
       }
       .right{
        &::after{
-         left: 10.5rem;
-         top: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 38px;
+        // background-color: #111;
        }
       } 
       }
@@ -1141,14 +1201,6 @@ footer {
   .home {
     .home-content {
       margin-top: 2rem;
-     
-      .right{
-       &::after{
-         left: 8.2rem;
-         top: 2.5rem;
-        //  background-color: green;
-       }
-      } 
       }
     
   }

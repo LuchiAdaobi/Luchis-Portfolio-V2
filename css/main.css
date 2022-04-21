@@ -222,6 +222,8 @@ img {
   font-family: 'Ubuntu', sans-serif;
   margin: 0 auto;
   padding-top: 1rem;
+  -webkit-animation: transitionIn .3s ease;
+          animation: transitionIn .3s ease;
 }
 
 .home .max-width {
@@ -244,11 +246,15 @@ img {
 
 .home .home-content .smiley {
   font-size: calc(3.5rem + 2vw);
+  -webkit-animation: transitionIn 1.3s ease;
+          animation: transitionIn 1.3s ease;
 }
 
 .home .home-content .text-1 {
   font-size: calc(1.5rem + 1.5vw);
   margin: .5rem auto;
+  -webkit-animation: transitionIn 1.2s ease;
+          animation: transitionIn 1.2s ease;
 }
 
 .home .home-content .text-2 {
@@ -257,16 +263,22 @@ img {
   margin-left: -3px;
   text-align: center;
   margin: .5rem auto;
+  -webkit-animation: transitionIn .8s ease;
+          animation: transitionIn .8s ease;
 }
 
 .home .home-content .text-3 {
   font-size: calc(2rem + 1.5vw);
   margin: 5px 0;
+  -webkit-animation: transitionIn .9s ease;
+          animation: transitionIn .9s ease;
 }
 
 .home .home-content .text-3 span {
   color: #ccaf08;
   font-weight: 500;
+  -webkit-animation: transitionIn .8s ease;
+          animation: transitionIn .8s ease;
 }
 
 .home .home-content .subtitle {
@@ -274,12 +286,16 @@ img {
   margin: 2rem 0;
   font-weight: 300;
   line-height: 1.6;
+  -webkit-animation: transitionIn 1s ease;
+          animation: transitionIn 1s ease;
 }
 
 .home .home-content a {
   margin-right: 1rem;
   position: relative;
   margin-bottom: .5rem;
+  -webkit-animation: bottomToTop 1.4s ease;
+          animation: bottomToTop 1.4s ease;
 }
 
 .home .home-content .right::after {
@@ -292,6 +308,11 @@ img {
   background-color: #f7f7f7;
 }
 
+.home .home-content .buttons {
+  -webkit-animation: bottomToTop .10s ease-in;
+          animation: bottomToTop .10s ease-in;
+}
+
 section {
   padding: 100px 0;
 }
@@ -300,6 +321,15 @@ section {
   font-family: "Poppins", sans-serif;
   background: #f7f7f7;
   padding: 100px 60px;
+  position: relative;
+  -webkit-transition: .5s ease-in;
+  transition: .5s ease-in;
+  scroll-behavior: smooth;
+}
+
+.about.reveal {
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
 }
 
 .about .about-content p {
@@ -698,6 +728,77 @@ footer span a:hover {
   text-decoration: underline;
 }
 
+.buttons {
+  -webkit-animation: bottomToTop 1.4s ease-in;
+          animation: bottomToTop 1.4s ease-in;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateY(-10deg);
+            transform: rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateY(-10deg);
+            transform: rotateY(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+}
+
+@-webkit-keyframes bottomToTop {
+  from {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottomToTop {
+  from {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scroll {
+  from {
+  }
+  to {
+  }
+}
+
+@keyframes scroll {
+  from {
+  }
+  to {
+  }
+}
+
 @media (max-width: 1300px) {
   .home .max-width {
     margin-left: 0;
@@ -1009,10 +1110,13 @@ footer span a:hover {
   }
   .home .home-content a {
     display: block;
+    z-index: 1;
   }
   .home .home-content .right::after {
-    left: 10.5rem;
-    top: 2.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 38px;
   }
   section .title {
     font-size: calc(1rem + 1vw);
@@ -1129,10 +1233,6 @@ footer span a:hover {
 @media (max-width: 475px) {
   .home .home-content {
     margin-top: 2rem;
-  }
-  .home .home-content .right::after {
-    left: 8.2rem;
-    top: 2.5rem;
   }
   .section {
     padding: 25px 5px;

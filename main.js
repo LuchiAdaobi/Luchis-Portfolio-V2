@@ -1,13 +1,29 @@
+// DOM SELECTION
+const aboutBtn = document.querySelector('#about');
+const freelanceBtn = document.querySelector('#freelance');
+const scrollEl = document.querySelector('.scrolly');
+
+// BUTTON SCROLL ANIMATION FOR DIFFERENT SECTIONS
+scrollEl.addEventListener('click', () => {
+  // scrollEl.forEach(() => {
+  setInterval(() => {
+    // alert('hello');
+  }, 1000);
+  // });
+});
+
+// WINDOW LOAD ANIMATIONS
+
 // TYPING ANIMATION
-let typed = new Typed('.typing', {
+let typed3 = new Typed('.typing', {
   strings: ['Developer', 'Freelancer'],
-  typespeed: 1,
+  typespeed: 10,
   backspeed: 6,
   loop: true,
 });
-typed = new Typed('.typing2', {
+let typed2 = new Typed('.typing2', {
   strings: ['Developer', 'Freelancer'],
-  typespeed: 1,
+  typespeed: 10,
   backspeed: 6,
   loop: true,
 });
