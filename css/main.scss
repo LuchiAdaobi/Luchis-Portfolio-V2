@@ -75,7 +75,7 @@ img {
   font-family: 'Ubuntu', sans-serif;
   margin: 0 auto;
   padding-top: 1rem;
-  animation: transitionIn .3s ease;
+  animation: transitionIn 0.3s ease;
 
   .max-width {
     text-align: center;
@@ -86,13 +86,13 @@ img {
   }
   .home-content {
     margin-top: 2rem;
-    .smiley{
+    .smiley {
       font-size: calc(3.5rem + 2vw);
       animation: transitionIn 1.3s ease;
     }
     .text-1 {
       font-size: calc(1.5rem + 1.5vw);
-      margin: .5rem auto;
+      margin: 0.5rem auto;
       animation: transitionIn 1.2s ease;
     }
     .text-2 {
@@ -100,21 +100,20 @@ img {
       font-weight: 600;
       margin-left: -3px;
       text-align: center;
-      margin: .5rem auto;
-      animation: transitionIn .8s ease;
+      margin: 0.5rem auto;
+      animation: transitionIn 0.8s ease;
     }
     .text-3 {
       font-size: calc(2rem + 1.5vw);
       margin: 5px 0;
-      animation: transitionIn .9s ease;
+      animation: transitionIn 0.9s ease;
       span {
         color: $primary-color;
-        font-weight: 500; 
-        animation: transitionIn .8s ease;
-
+        font-weight: 500;
+        animation: transitionIn 0.8s ease;
       }
     }
-    .subtitle{
+    .subtitle {
       font-size: 1.1rem;
       margin: 2rem 0;
       font-weight: 300;
@@ -125,28 +124,27 @@ img {
       @extend %btn;
       margin-right: 1rem;
       position: relative;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       animation: bottomToTop 1.4s ease;
       scroll-behavior: smooth;
-      transition: .3s ease;
+      transition: 0.3s ease;
     }
-   
-    .right{
-      &::after{
+
+    .right {
+      &::after {
         content: '';
         position: absolute;
         top: 2rem;
-        left: -.75rem;
+        left: -0.75rem;
         height: 10.2rem;
-        width: .12rem;
+        width: 0.12rem;
         background-color: #f7f7f7;
       }
     }
     .buttons {
-      animation: bottomToTop .10s ease-in;
+      animation: bottomToTop 0.1s ease-in;
     }
   }
-
 }
 
 // WEB PRESENCE
@@ -158,30 +156,24 @@ section {
   background: #f7f7f7;
   padding: 100px 60px;
   position: relative;
-  transition: .5s ease-in;
-  scroll-behavior: smooth;
-  &.reveal{
-    transition: 2s all ease;
-    // opacity: 0;
-    // transform: translateY(-150px);
-  }
+  transition: .2s ease;
+  // scroll-behavior: smooth;
 
   .about-content {
+    transition: .3s ease;
     p {
       padding-bottom: 1.5rem;
       color: $color-text;
-      font-size: calc(.6rem + .5vw);
+      font-size: calc(0.6rem + 0.5vw);
     }
-    
   }
-  
 }
 
 // WORK SECTION
 .services {
   background: #111;
   color: #f7f7f7;
-  .title{
+  .title {
     color: #fff;
     text-align: center;
     margin: auto;
@@ -191,13 +183,13 @@ section {
       bottom: 0;
       right: 0;
       transform: translateX(-50%);
+    }
   }
-  }
-  .subtitle{
+  .subtitle {
     padding: 2.5rem;
     text-align: center;
     color: #cac5c5;
-    font-size: calc(.7rem + .5vw);
+    font-size: calc(0.7rem + 0.5vw);
   }
   .serv-content {
     @extend %flex;
@@ -206,20 +198,20 @@ section {
       @extend %card;
       margin-bottom: 2rem;
       border-radius: 1rem;
-     
+
       .text {
         font-size: calc(1rem + 1vw);
         font-weight: 500;
         margin: 10px 0 7px 0;
       }
-      p{
+      p {
         color: #cac5c5;
-        font-size: calc(.7rem + .5vw);
+        font-size: calc(0.7rem + 0.5vw);
       }
-      a{
+      a {
         @extend %btn-secondary;
       }
-      img{
+      img {
         object-fit: cover;
         width: 380px;
         height: 200px;
@@ -231,79 +223,78 @@ section {
 }
 
 // FREELANCE SERVICE
-.freelance-serv{
+.freelance-serv {
   color: #555;
   padding: 100px 40px;
-  .freelance-serv-content{
-    display:grid;
+  .freelance-serv-content {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 
-    .left{
-      .serv-icons{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-      align-items: center;
-      row-gap: 1rem;
+    .left {
+      .serv-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
       }
-      li{
+      li {
         position: relative;
         padding: 2.5rem;
         margin-right: 1rem;
-        span i{
+        span i {
           font-size: calc(3.5rem + 2vw);
           padding: 3rem;
-          position: relative; 
+          position: relative;
           text-align: center;
-          &::after{
+          &::after {
             content: '';
             position: absolute;
             border: 1px solid lightgrey;
             top: 6%;
-            left: 4%; 
+            left: 4%;
             width: 160px;
             height: 160px;
             transform: rotate(-45deg);
             background-color: transparent;
             border-radius: 5px;
-          }  
+          }
         }
-        &:first-child{
+        &:first-child {
           color: palegoldenrod;
-                }      
-                &:nth-child(2){
-                  color: lighten($primary-color, 25%);
-                }      
-                &:nth-child(3){
-                  color: rgb(236, 173, 71);
-                }      
-                &:nth-child(4){
-                  color: rgb(183, 247, 183);
-                } 
-
+        }
+        &:nth-child(2) {
+          color: lighten($primary-color, 25%);
+        }
+        &:nth-child(3) {
+          color: rgb(236, 173, 71);
+        }
+        &:nth-child(4) {
+          color: rgb(183, 247, 183);
+        }
       }
     }
-    .right{
+    .right {
       line-height: 2;
-      .title{
+      .title {
         font-size: calc(1.2rem + 1.5vw);
         margin-bottom: 2rem;
       }
-      .subtitle{
-        font-size: calc(.6rem + .6vw);
+      .subtitle {
+        font-size: calc(0.6rem + 0.6vw);
         padding-bottom: 2.8rem;
       }
-      ol{
+      ol {
         margin-left: 2rem;
 
-        li p{
-          font-size: calc(.6rem + .6vw);
+        li p {
+          font-size: calc(0.6rem + 0.6vw);
         }
       }
-      .tech-stack{
+      .tech-stack {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -312,7 +303,7 @@ section {
         flex-wrap: wrap;
         gap: 2rem;
 
-        img{
+        img {
           width: 3rem;
           height: 3rem;
           margin: auto;
@@ -320,35 +311,33 @@ section {
       }
     }
   }
- 
 }
 
 // ABOUT LUCHI SECTION
-.abt-luchi{
+.abt-luchi {
   background-color: $color-dark;
   color: #fff;
   margin: auto;
-  .max-width{
+  .max-width {
     padding: 0 3rem;
-    .left{
+    .left {
       .title {
         color: #fff;
         text-align: center;
         margin: auto;
-        &::before{
+        &::before {
           background-color: #fff;
           left: 50%;
           bottom: 0;
           right: 0;
           transform: translateX(-50%);
-          
         }
       }
-      p{
+      p {
         padding: 1rem;
-        font-size: calc(.6rem + .6vw);
+        font-size: calc(0.6rem + 0.6vw);
       }
-      .first{
+      .first {
         padding-top: 3rem;
       }
       .top {
@@ -372,7 +361,6 @@ section {
         }
       }
     }
-  
   }
 }
 
@@ -381,18 +369,17 @@ section {
 .contact {
   background-color: #fff;
   color: $color-text;
-  .max-width{
+  .max-width {
     text-align: center;
     margin: auto;
     .title {
       text-align: center;
       margin: auto;
-      &::before{
+      &::before {
         left: 50%;
         bottom: 0;
         right: 0;
         transform: translateX(-50%);
-        
       }
     }
   }
@@ -406,15 +393,15 @@ section {
     }
 
     .left {
-      .text{
+      .text {
         padding: 1.3rem;
       }
       p {
-        font-size: calc(.6rem + .6vw);
+        font-size: calc(0.6rem + 0.6vw);
         padding-bottom: 3rem;
       }
-      .head{
-        padding-bottom: .3rem;
+      .head {
+        padding-bottom: 0.3rem;
       }
       .icons {
         margin: 10px auto;
@@ -429,15 +416,15 @@ section {
       margin: auto;
 
       i {
-        font-size: calc(.6rem + .6vw);
+        font-size: calc(0.6rem + 0.6vw);
         color: $primary-color;
         text-align: center;
         margin: auto;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
 
       .info {
-        margin-left: .8rem;
+        margin-left: 0.8rem;
         margin: auto;
         text-align: center;
         .subtitle {
@@ -451,7 +438,7 @@ section {
   .right {
     form {
       padding-top: 3rem;
-      font-size: calc(.6rem + .6vw);
+      font-size: calc(0.6rem + 0.6vw);
       .fields {
         display: flex;
 
@@ -467,7 +454,7 @@ section {
 
         input {
           @extend %input;
-          font-size: calc(.6rem + .6vw);
+          font-size: calc(0.6rem + 0.6vw);
           pointer-events: none;
           opacity: 0.7;
         }
@@ -485,7 +472,7 @@ section {
           @extend %input;
           padding-top: 10px;
           resize: none;
-          font-size: calc(.6rem + .6vw);
+          font-size: calc(0.6rem + 0.6vw);
           pointer-events: none;
           opacity: 0.7;
         }
@@ -524,12 +511,12 @@ footer {
   padding: 6.1rem 1.2rem;
   color: #fff;
   text-align: center;
-  font-size: calc(.6rem + .6vw);
+  font-size: calc(0.6rem + 0.6vw);
   .social-links {
-    padding: .7rem;
-    i{
+    padding: 0.7rem;
+    i {
       padding-left: 1.5rem;
-      font-size: calc(.9rem + .9vw);
+      font-size: calc(0.9rem + 0.9vw);
       color: rgb(204, 175, 8);
     }
   }
@@ -556,7 +543,7 @@ footer {
 }
 @keyframes bottomToTop {
   from {
-    transform: translateY(400px);
+    transform: translateY(180px);
     opacity: 0;
   }
   to {
@@ -580,22 +567,18 @@ footer {
       margin-left: 0;
     }
   }
- 
 }
 
-
 @media (max-width: 1220px) {
-//   .max-width {
-//     padding: 0 50px;
-//   }
-  
-    section{
-      .title{
-        font-size: calc(1rem + 1vw);
-        width: 70%;
-        text-align: left;
+  //   .max-width {
+  //     padding: 0 50px;
+  //   }
 
-       
+  section {
+    .title {
+      font-size: calc(1rem + 1vw);
+      width: 70%;
+      text-align: left;
     }
   }
   // MY WORK
@@ -608,7 +591,6 @@ footer {
     }
   }
 }
-
 
 @media (max-width: 1047px) {
   .navbar {
@@ -645,7 +627,7 @@ footer {
       content: '\f00d';
     }
   }
-  section{
+  section {
     padding: 50px 10px;
   }
   .home {
@@ -661,7 +643,7 @@ footer {
         font-size: calc(1.5rem + 2vw);
       }
       .subtitle {
-        font-size: calc(.7rem + .8vw);
+        font-size: calc(0.7rem + 0.8vw);
       }
       a {
         padding: 10px 30px;
@@ -675,11 +657,11 @@ footer {
     .about-content {
       p {
         padding-bottom: 1.5rem;
-        font-size: calc(.65rem + .6vw);
+        font-size: calc(0.65rem + 0.6vw);
       }
     }
   }
-// MY WORK
+  // MY WORK
   .services {
     .serv-content {
       .card {
@@ -689,99 +671,91 @@ footer {
         img {
           width: 620px;
           height: 350px;
-          
         }
       }
     }
   }
 
-
   .contact {
     .contact-content {
-        
       .column {
         width: 100%;
         margin-bottom: 35px;
       }
     }
   }
-// FREELANCE SERVICE
-.freelance-serv{
-  padding: 50px 30px;
-  .freelance-serv-content{
-    grid-template-columns: 1fr;
-    .left{
-      .serv-icons{
-        grid-template-columns: repeat(4, 1fr);
-      }
-      li{
-        padding: 2.5rem 1.5rem;
-        span i{
-          font-size: calc(2.5rem + 1.5vw);
-          padding: 2rem 1rem;
-          &::after{
-            top: 12%;
-            left: 2%; 
-            max-width: 80px;
-            max-height: 80px;
-          }  
+  // FREELANCE SERVICE
+  .freelance-serv {
+    padding: 50px 30px;
+    .freelance-serv-content {
+      grid-template-columns: 1fr;
+      .left {
+        .serv-icons {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        li {
+          padding: 2.5rem 1.5rem;
+          span i {
+            font-size: calc(2.5rem + 1.5vw);
+            padding: 2rem 1rem;
+            &::after {
+              top: 12%;
+              left: 2%;
+              max-width: 80px;
+              max-height: 80px;
+            }
+          }
         }
       }
-    }
-    .right{
-      line-height: 2;
-      .title{
-        font-size: calc(1.2rem + 1.5vw);
-        margin-bottom: 2rem;
-      }
-      .subtitle{
-        font-size: calc(.6rem + .6vw);
-        padding-bottom: 2.8rem;
-      }
-      ol{
-        margin-left: 2rem;
+      .right {
+        line-height: 2;
+        .title {
+          font-size: calc(1.2rem + 1.5vw);
+          margin-bottom: 2rem;
+        }
+        .subtitle {
+          font-size: calc(0.6rem + 0.6vw);
+          padding-bottom: 2.8rem;
+        }
+        ol {
+          margin-left: 2rem;
 
-        li p{
-          font-size: calc(.6rem + .6vw);
+          li p {
+            font-size: calc(0.6rem + 0.6vw);
+          }
         }
       }
     }
   }
- 
-}
-// ABOUT LUCHI SECTION
-.abt-luchi{
-  .max-width{
-    padding: 0 2rem;
-    .left{
-    
-      p{
-        padding: 1rem;
-        font-size: calc(.7rem + .6vw);
+  // ABOUT LUCHI SECTION
+  .abt-luchi {
+    .max-width {
+      padding: 0 2rem;
+      .left {
+        p {
+          padding: 1rem;
+          font-size: calc(0.7rem + 0.6vw);
+        }
       }
-      
     }
-  
   }
-}
-// CONTACT SECTION
+  // CONTACT SECTION
 
-.contact {
+  .contact {
     .text {
       margin-bottom: 10px;
     }
 
-    .contact-content{
+    .contact-content {
       padding: 0 1.5rem;
       .left {
-        .text{
+        .text {
           padding: 1.3rem;
         }
         p {
-          font-size: calc(.7rem + .6vw);
+          font-size: calc(0.7rem + 0.6vw);
           padding-bottom: 3rem;
         }
-       
       }
       .row {
         display: flex;
@@ -789,43 +763,40 @@ footer {
         justify-content: center;
         align-items: center;
         margin: auto;
-  
+
         i {
-          font-size: calc(.7rem + .6vw);
+          font-size: calc(0.7rem + 0.6vw);
           color: $primary-color;
           text-align: center;
           margin: auto;
-          margin-right: .5rem;
+          margin-right: 0.5rem;
         }
-  
       }
       .right {
         form {
-          font-size: calc(.7rem + .6vw);
-          
-            input {
-              font-size: calc(.7rem + .6vw);
-            }
+          font-size: calc(0.7rem + 0.6vw);
+
+          input {
+            font-size: calc(0.7rem + 0.6vw);
           }
-          .textarea {
-            textarea {
-              font-size: calc(.7rem + .6vw);
-            }
+        }
+        .textarea {
+          textarea {
+            font-size: calc(0.7rem + 0.6vw);
           }
-          .button {
-            height: 2.5rem;
-            width: 10rem;
-    
-            button {
-              display: block;
-            }
+        }
+        .button {
+          height: 2.5rem;
+          width: 10rem;
+
+          button {
+            display: block;
           }
         }
       }
     }
-    
-    }
-
+  }
+}
 
 @media (max-width: 690px) {
   .max-width {
@@ -837,7 +808,7 @@ footer {
       padding: 0 2rem;
     }
     .home-content {
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       .text-1 {
         font-size: calc(1rem + 2vw);
       }
@@ -848,28 +819,27 @@ footer {
         font-size: calc(1.2rem + 2vw);
       }
       .subtitle {
-        font-size: calc(.7rem + .8vw);
+        font-size: calc(0.7rem + 0.8vw);
       }
       a {
-        font-size: calc(.7rem + .9vw);
-        .right{
-          &::after{
+        font-size: calc(0.7rem + 0.9vw);
+        .right {
+          &::after {
             height: 12.2rem;
           }
         }
-
       }
     }
     // WEB PRESENCE
     .about {
       .about-content {
         p {
-          font-size: calc(.73rem + .6vw);
+          font-size: calc(0.73rem + 0.6vw);
         }
       }
     }
   }
-// MY WORK
+  // MY WORK
   .services {
     .serv-content {
       .card {
@@ -884,100 +854,88 @@ footer {
     }
   }
   // FREELANCE SERVICE
-.freelance-serv{
-  padding: 50px 15px;
-  .freelance-serv-content{
-    grid-template-columns: 1fr;
-    .left{
-      .serv-icons{
-        grid-template-columns: repeat(4, 1fr);
+  .freelance-serv {
+    padding: 50px 15px;
+    .freelance-serv-content {
+      grid-template-columns: 1fr;
+      .left {
+        .serv-icons {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        li {
+          padding: 2.5rem 0.8rem;
+          span i {
+            font-size: calc(2rem + 1vw);
+            padding: 2rem 1rem;
+            &::after {
+              top: 17%;
+              left: 6%;
+              max-width: 65px;
+              max-height: 65px;
+            }
+          }
+        }
       }
-      li{
-        padding: 2.5rem .8rem;
-        span i{
-          font-size: calc(2rem + 1vw);
-          padding: 2rem 1rem;
-          &::after{
-            top: 17%;
-            left: 6%; 
-            max-width: 65px;
-            max-height: 65px;
-          }  
+      .right {
+        line-height: 2;
+        .title {
+          font-size: calc(1.2rem + 1.5vw);
+          margin-bottom: 2rem;
+        }
+        .subtitle {
+          font-size: calc(0.7rem + 0.6vw);
+          padding-bottom: 2.8rem;
+        }
+        ol {
+          margin-left: 1rem;
         }
       }
     }
-    .right{
-      line-height: 2;
-      .title{
-        font-size: calc(1.2rem + 1.5vw);
-        margin-bottom: 2rem;
-      }
-      .subtitle{
-        font-size: calc(.7rem + .6vw);
-        padding-bottom: 2.8rem;
-
-      }
-      ol{
-        margin-left: 1rem;
+  }
+  // ABOUT LUCHI SECTION
+  .abt-luchi {
+    .max-width {
+      padding: 0 1rem;
+      .left {
+        p {
+          padding: 1rem;
+          font-size: calc(0.7rem + 0.6vw);
+        }
       }
     }
   }
- 
-}
-// ABOUT LUCHI SECTION
-.abt-luchi{
-  .max-width{
-    padding: 0 1rem;
-    .left{
-    
-      p{
-        padding: 1rem;
-        font-size: calc(.7rem + .6vw);
+  // CONTACT SECTION
+
+  .contact {
+    .contact-content {
+      padding: 0 10px;
+      .left {
+        p {
+          font-size: calc(0.7rem + 0.6vw);
+        }
       }
-      
-    }
-  
-  }
-}
-// CONTACT SECTION
-
-.contact {
-   .contact-content{
-    padding: 0 10px;
-    .left {
-     
-      p {
-        font-size: calc(.7rem + .6vw);
-
+      .row {
+        i {
+          font-size: calc(0.7rem + 0.6vw);
+        }
       }
-     
-    }
-    .row {
-      i {
-        font-size: calc(.7rem + .6vw);
+      .right {
+        form {
+          font-size: calc(0.7rem + 0.6vw);
 
-      }
-
-    }
-    .right {
-      form {
-        font-size: calc(.7rem + .6vw);
-        
           input {
-            font-size: calc(.7rem + .6vw);
+            font-size: calc(0.7rem + 0.6vw);
           }
         }
         .textarea {
           textarea {
-            font-size: calc(.7rem + .6vw);
+            font-size: calc(0.7rem + 0.6vw);
           }
         }
-        
       }
+    }
   }
 }
-}
-
 
 @media (max-width: 500px) {
   .home {
@@ -994,201 +952,213 @@ footer {
         font-size: calc(1rem + 1.7vw);
       }
       .subtitle {
-        font-size: calc(.7rem + .7vw);
+        font-size: calc(0.7rem + 0.7vw);
       }
-      a{
+      a {
         display: block;
         z-index: 1;
       }
-      .right{
-       &::after{
-        left: 50%;
-        transform: translateX(-50%);
-        top: 38px;
-        // background-color: #111;
-       }
-      } 
+      .right {
+        &::after {
+          left: 50%;
+          transform: translateX(-50%);
+          top: 38px;
+          height: 6.5rem;
+          // background-color: #111;
+        }
       }
-    
+    }
   }
-  section{
-    .title{
+  section {
+    .title {
       font-size: calc(1rem + 1vw);
       width: 80%;
       text-align: left;
-  }
-}
-// WEB PRESENCE
-.about {
-  padding: 60px 10px;
-  .title{
-    width: 100%;
-  }
-  .about-content {
-    p {
-      font-size: calc(.72rem + .6vw);
     }
   }
-}
-// MY WORK
-.services {
-  // padding: 50px 10px;
-  .subtitle{
-    padding: 1.5rem;
-  }
-  .serv-content {
-    .card {
-      img {
-        height: 200px;
-        width: 400px;
-        object-fit: contain;
-      }
-      a{
-        display: block;
-        margin-top: 1.4rem;
+  // WEB PRESENCE
+  .about {
+    padding: 60px 10px;
+    .title {
+      width: 100%;
+    }
+    .about-content {
+      p {
+        font-size: calc(0.72rem + 0.6vw);
       }
     }
   }
-}
-
- // FREELANCE SERVICE
- .freelance-serv{
-  padding: 30px 10px;
-  .freelance-serv-content{
-    grid-template-columns: 1fr;
-    .left{
-      .serv-icons{
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 0;
-      }
-      li{
-        padding: .5rem 0rem;
-        padding-bottom: 0;
-        text-align: center;
-        span i{
-          font-size: calc(2.3rem + 1.5vw);
-          padding: 2rem 1.1rem;
-          &::after{
-            top: 17%;
-            left: 6%; 
-            max-width: 70px;
-            max-height: 70px;
-          }  
+  // MY WORK
+  .services {
+    // padding: 50px 10px;
+    .subtitle {
+      padding: 1.5rem;
+    }
+    .serv-content {
+      .card {
+        img {
+          height: 200px;
+          width: 400px;
+          object-fit: contain;
         }
-      }
-    }
-    .right{
-      margin-top: 1.5rem;
-      line-height: 2;
-      .title{
-        font-size: calc(1.2rem + 1.5vw);
-        margin-bottom: 2rem;
-      }
-      .subtitle{
-        font-size: calc(.7rem + .6vw);
-        padding-bottom: 2.8rem;
-
-      }
-      ol{
-        margin-left: 1rem;
-
-        li p{
-          font-size: calc(.7rem + .6vw);
+        a {
+          display: block;
+          margin-top: 1.4rem;
         }
       }
     }
   }
- 
-}
-// ABOUT LUCHI SECTION
-.abt-luchi{
-  .max-width{
-    padding: 0 1rem;
-    .left{
-    
-      p{
-        padding: 10px;
-        font-size: calc(.7rem + .6vw);
+
+  // FREELANCE SERVICE
+  .freelance-serv {
+    padding: 30px 10px;
+    .freelance-serv-content {
+      grid-template-columns: 1fr;
+      .left {
+        .serv-icons {
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 0;
+        }
+        li {
+          padding: 0.5rem 0rem;
+          padding-bottom: 0;
+          text-align: center;
+          span i {
+            font-size: calc(2.3rem + 1.5vw);
+            padding: 2rem 1.1rem;
+            &::after {
+              top: 17%;
+              left: 6%;
+              max-width: 70px;
+              max-height: 70px;
+            }
+          }
+        }
       }
-      
-    }
-  
-  }
-}
-// CONTACT SECTION
+      .right {
+        margin-top: 1.5rem;
+        line-height: 2;
+        .title {
+          font-size: calc(1.2rem + 1.5vw);
+          margin-bottom: 2rem;
+        }
+        .subtitle {
+          font-size: calc(0.7rem + 0.6vw);
+          padding-bottom: 2.8rem;
+        }
+        ol {
+          margin-left: 1rem;
 
-.contact {
-  .contact-content{
-   padding: 0 10px;
-   .left {
-    
-     p {
-       font-size: calc(.7rem + .6vw);
-       padding-bottom: 3rem;
-     }
-    
-   }
-   .row {
-     i {
-       font-size: calc(.7rem + .6vw);
-     }
-
-   }
-   .right {
-     form {
-       font-size: calc(.7rem + .6vw);
-       
-         input {
-           font-size: calc(.7rem + .6vw);
-         }
-       }
-       .textarea {
-         textarea {
-           font-size: calc(.7rem + .6vw);
-         }
-       }
-       .button {
-         width: 100%;
-         display: block;
-       }
-     }
- }
-}
-// FOOTER
-footer {
-  padding: 3.7rem 1.2rem;
-  font-size: calc(.7rem + .6vw);
-  .social-links {
-   
-    i{
-      font-size: calc(1.1rem + 1vw);
+          li p {
+            font-size: calc(0.7rem + 0.6vw);
+          }
+        }
+      }
     }
   }
-}
+  // ABOUT LUCHI SECTION
+  .abt-luchi {
+    .max-width {
+      padding: 0 1rem;
+      .left {
+        p {
+          padding: 10px;
+          font-size: calc(0.7rem + 0.6vw);
+        }
+      }
+    }
+  }
+  // CONTACT SECTION
+
+  .contact {
+    .contact-content {
+      padding: 0 10px;
+      .left {
+        p {
+          font-size: calc(0.7rem + 0.6vw);
+          padding-bottom: 3rem;
+        }
+      }
+      .row {
+        i {
+          font-size: calc(0.7rem + 0.6vw);
+        }
+      }
+      .right {
+        form {
+          font-size: calc(0.7rem + 0.6vw);
+
+          input {
+            font-size: calc(0.7rem + 0.6vw);
+          }
+        }
+        .textarea {
+          textarea {
+            font-size: calc(0.7rem + 0.6vw);
+          }
+        }
+        .button {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  // FOOTER
+  footer {
+    padding: 3.7rem 1.2rem;
+    font-size: calc(0.7rem + 0.6vw);
+    .social-links {
+      i {
+        font-size: calc(1.1rem + 1vw);
+      }
+    }
+  }
 }
 
 @media (max-width: 475px) {
   .home {
     .home-content {
       margin-top: 2rem;
-      }
-    
-  }
-  .section{
-    padding: 25px 5px;
-  }
-// MY WORK
-.services {
-  .serv-content {
-    .card {
-      img {
-        height: 180px;
-        width: 290px;
-        object-fit: contain;
-        // margin: auto;
-      }
-      
     }
   }
-}
+  .section {
+    padding: 25px 5px;
+  }
+  // MY WORK
+  .services {
+    .serv-content {
+      .card {
+        img {
+          height: 180px;
+          width: 290px;
+          object-fit: contain;
+          // margin: auto;
+        }
+      }
+    }
+  }
+  // FREELANCE SERVICE
+  .freelance-serv {
+    .freelance-serv-content{
+      .right {
+        .tech-stack {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 1.5rem;
+          text-align: center;
+          flex-wrap: wrap;
+          gap: 4rem;
+  
+          img {
+            width: 3rem;
+            height: 3rem;
+            margin: auto;
+          }
+        }
+      }
+    }
+    
+  }
 }

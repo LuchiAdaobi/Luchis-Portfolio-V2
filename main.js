@@ -11,7 +11,7 @@ document.querySelector('.scrolly').addEventListener('click', () => {
         behavior: 'smooth',
         top: document.querySelector('#about').getBoundingClientRect().top,
       }),
-    4e3
+    1000
   );
 });
 
@@ -64,13 +64,13 @@ $('.carousel').owlCarousel({
 });
 
 // TYPING ANIMATION
-let typed = new Typed('.typing', {
+const typed = new Typed('.typing', {
   strings: ['Developer', 'Freelancer'],
   typespeed: 100,
   backspeed: 60,
   loop: true,
 });
-let typed2 = new Typed('.typing2', {
+const typed2 = new Typed('.typing2', {
   strings: ['Developer', 'Freelancer'],
   typespeed: 100,
   backspeed: 60,
