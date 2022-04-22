@@ -125,70 +125,6 @@ img {
   margin: auto;
 }
 
-.navbar {
-  position: fixed;
-  width: 100%;
-  padding: 1.8rem 0;
-  padding-bottom: 0;
-  font-family: 'Ubuntu', sans-serif;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-
-.navbar.sticky {
-  padding: 15px 0;
-  background: #ccaf08;
-  -webkit-transition: all 0.9s ease;
-  transition: all 0.9s ease;
-}
-
-.navbar.sticky:hover .menu a:hover {
-  color: #fff;
-  -webkit-transform: scale(1.05) !important;
-          transform: scale(1.05) !important;
-  display: inline-block;
-}
-
-.navbar .max-width {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navbar .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.navbar .menu li a {
-  display: block !important;
-  color: #fff;
-  margin-left: 2rem;
-  font-size: calc(.5rem + .5vw);
-  font-weight: 500;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.navbar .menu li a:hover {
-  color: #ccaf08;
-}
-
-.menu-btn {
-  color: #fff;
-  font-size: 23px;
-  cursor: pointer;
-  display: none;
-}
-
 .scroll-up-btn {
   position: fixed;
   height: 2.5rem;
@@ -296,6 +232,9 @@ img {
   margin-bottom: .5rem;
   -webkit-animation: bottomToTop 1.4s ease;
           animation: bottomToTop 1.4s ease;
+  scroll-behavior: smooth;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .home .home-content .right::after {
@@ -550,6 +489,26 @@ section {
   padding-top: 3rem;
 }
 
+.abt-luchi .max-width .left .top {
+  padding-top: 3rem;
+}
+
+.abt-luchi .max-width .left .top span img {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.abt-luchi .max-width .left .second span img {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+}
+
 .contact {
   background-color: #fff;
   color: #555;
@@ -728,11 +687,6 @@ footer span a:hover {
   text-decoration: underline;
 }
 
-.buttons {
-  -webkit-animation: bottomToTop 1.4s ease-in;
-          animation: bottomToTop 1.4s ease-in;
-}
-
 @-webkit-keyframes transitionIn {
   from {
     opacity: 0;
@@ -787,15 +741,19 @@ footer span a:hover {
 
 @-webkit-keyframes scroll {
   from {
+    opacity: 0;
   }
   to {
+    opacity: 1;
   }
 }
 
 @keyframes scroll {
   from {
+    opacity: 0;
   }
   to {
+    opacity: 1;
   }
 }
 

@@ -1,41 +1,23 @@
-// DOM SELECTION
-const aboutBtn = document.querySelector('#about');
-const freelanceBtn = document.querySelector('#freelance');
-const scrollEl = document.querySelector('.scrolly');
-
 // BUTTON SCROLL ANIMATION FOR DIFFERENT SECTIONS
-scrollEl.addEventListener('click', () => {
-  // scrollEl.forEach(() => {
-  setInterval(() => {
-    // alert('hello');
-  }, 1000);
-  // });
+let timeout;
+
+document.querySelector('.scrolly').addEventListener('click', () => {
+  clearTimeout(timeout);
+
+  // setTimeout(() => (location.hash = '#about'), 2000);
+  setTimeout(
+    () =>
+      window.scrollTo({
+        behavior: 'smooth',
+        top: document.querySelector('#about').getBoundingClientRect().top,
+      }),
+    4e3
+  );
 });
 
-// WINDOW LOAD ANIMATIONS
-
-// TYPING ANIMATION
-let typed3 = new Typed('.typing', {
-  strings: ['Developer', 'Freelancer'],
-  typespeed: 10,
-  backspeed: 6,
-  loop: true,
-});
-let typed2 = new Typed('.typing2', {
-  strings: ['Developer', 'Freelancer'],
-  typespeed: 10,
-  backspeed: 6,
-  loop: true,
-});
 // NAV SCROLL
 $(document).ready(() => {
   $(window).scroll(function () {
-    // if (this.scrollY > 20) {
-    //   $('.navbar').addClass('sticky');
-    // } else {
-    //   $('.navbar').removeClass('sticky');
-    // }
-
     // SCROLL UP BUTTON SHOW AND HIDE SCRIPT
 
     if (this.scrollY > 500) {
@@ -79,4 +61,18 @@ $('.carousel').owlCarousel({
       nav: false,
     },
   },
+});
+
+// TYPING ANIMATION
+let typed = new Typed('.typing', {
+  strings: ['Developer', 'Freelancer'],
+  typespeed: 100,
+  backspeed: 60,
+  loop: true,
+});
+let typed2 = new Typed('.typing2', {
+  strings: ['Developer', 'Freelancer'],
+  typespeed: 100,
+  backspeed: 60,
+  loop: true,
 });
