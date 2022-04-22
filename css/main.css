@@ -459,10 +459,11 @@ section {
 .abt-luchi {
   background-color: #222;
   color: #fff;
+  margin: auto;
 }
 
 .abt-luchi .max-width {
-  padding: 0 4rem;
+  padding: 0 3rem;
 }
 
 .abt-luchi .max-width .left .title {
@@ -616,6 +617,8 @@ section {
 
 .contact .right form .field input {
   font-size: calc(.6rem + .6vw);
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .contact .right form .name {
@@ -634,6 +637,8 @@ section {
   padding-top: 10px;
   resize: none;
   font-size: calc(.6rem + .6vw);
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .contact .right form .button {
@@ -653,6 +658,8 @@ section {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
+  pointer-events: none;
+  opacity: 0.4;
 }
 
 .contact .right form .button button:hover {

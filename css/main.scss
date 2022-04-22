@@ -327,8 +327,9 @@ section {
 .abt-luchi{
   background-color: $color-dark;
   color: #fff;
+  margin: auto;
   .max-width{
-    padding: 0 4rem;
+    padding: 0 3rem;
     .left{
       .title {
         color: #fff;
@@ -467,6 +468,8 @@ section {
         input {
           @extend %input;
           font-size: calc(.6rem + .6vw);
+          pointer-events: none;
+          opacity: 0.7;
         }
       }
       .name {
@@ -483,6 +486,8 @@ section {
           padding-top: 10px;
           resize: none;
           font-size: calc(.6rem + .6vw);
+          pointer-events: none;
+          opacity: 0.7;
         }
       }
       .button {
@@ -500,7 +505,8 @@ section {
           border-radius: 6px;
           transition: all 0.3s ease;
           cursor: pointer;
-
+          pointer-events: none;
+          opacity: 0.4;
           &:hover {
             color: $primary-color;
             background: transparent;
