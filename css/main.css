@@ -237,6 +237,7 @@ img {
   scroll-behavior: smooth;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  color: #111;
 }
 
 .home .home-content .right::after {
