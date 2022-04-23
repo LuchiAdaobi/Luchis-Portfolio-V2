@@ -11,6 +11,7 @@
     &:hover {
         color: $primary-color;
         background:transparent !important;
+        transform: scale(1.05)
     }
 }
 %btn-secondary{

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
-.services .serv-content .card a, .home .home-content a {
+.services .serv-content .card .btn, .home .home-content a {
   display: inline-block;
   background: #ccaf08;
   font-size: 1.3rem;
@@ -11,17 +11,19 @@
   transition: .3s ease;
 }
 
-.services .serv-content .card a:hover, .home .home-content a:hover {
+.services .serv-content .card .btn:hover, .home .home-content a:hover {
   color: #ccaf08;
   background: transparent !important;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.services .serv-content .card a {
+.services .serv-content .card .btn {
   background-color: transparent;
   color: #ccaf08;
 }
 
-.services .serv-content .card a:hover {
+.services .serv-content .card .btn:hover {
   color: #fff;
   background: #ccaf08 !important;
 }
@@ -242,7 +244,7 @@ img {
   position: absolute;
   top: 2rem;
   left: -0.75rem;
-  height: 10.2rem;
+  height: 11.9rem;
   width: 0.12rem;
   background-color: #f7f7f7;
 }
@@ -332,6 +334,13 @@ section {
   height: 200px;
   border-radius: 1.2rem;
   overflow: hidden;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.services .serv-content .card img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .freelance-serv {
@@ -588,8 +597,10 @@ section {
   text-align: center;
 }
 
-.contact .contact-content .row .info .subtitle {
+.contact .contact-content .row .info .subtitle a {
   font-weight: 500;
+  color: #555;
+  font-weight: bold;
 }
 
 .contact .right form {
@@ -683,6 +694,14 @@ footer .social-links i {
   padding-left: 1.5rem;
   font-size: calc(0.9rem + 0.9vw);
   color: #ccaf08;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+footer .social-links i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #fdf7d6;
 }
 
 footer span a {
@@ -1176,8 +1195,14 @@ footer span a:hover {
   .contact .contact-content .right form {
     font-size: calc(0.7rem + 0.6vw);
   }
+  .contact .contact-content .right form .fields {
+    display: block;
+  }
   .contact .contact-content .right form input {
     font-size: calc(0.7rem + 0.6vw);
+  }
+  .contact .contact-content .right form .email {
+    margin-left: 0;
   }
   .contact .contact-content .right .textarea textarea {
     font-size: calc(0.7rem + 0.6vw);
@@ -1208,6 +1233,9 @@ footer span a:hover {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .freelance-serv .freelance-serv-content .left {
+    display: none;
+  }
   .freelance-serv .freelance-serv-content .right .tech-stack {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1222,7 +1250,7 @@ footer span a:hover {
     text-align: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 4rem;
+    gap: 2rem;
   }
   .freelance-serv .freelance-serv-content .right .tech-stack img {
     width: 3rem;

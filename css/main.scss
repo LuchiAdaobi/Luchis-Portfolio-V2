@@ -136,7 +136,7 @@ img {
         position: absolute;
         top: 2rem;
         left: -0.75rem;
-        height: 10.2rem;
+        height: 11.9rem;
         width: 0.12rem;
         background-color: #f7f7f7;
       }
@@ -208,15 +208,21 @@ section {
         color: #cac5c5;
         font-size: calc(0.7rem + 0.5vw);
       }
-      a {
+      .btn {
         @extend %btn-secondary;
       }
-      img {
-        object-fit: cover;
-        width: 380px;
-        height: 200px;
-        border-radius: 1.2rem;
-        overflow: hidden;
+      
+        img {
+          object-fit: cover;
+          width: 380px;
+          height: 200px;
+          border-radius: 1.2rem;
+          overflow: hidden;
+          transition: .3s ease;
+          &:hover{
+            transform: scale(1.05);
+          }
+        
       }
     }
   }
@@ -427,9 +433,10 @@ section {
         margin-left: 0.8rem;
         margin: auto;
         text-align: center;
-        .subtitle {
+        .subtitle a{
           font-weight: 500;
-          // color: #a7a0a0;
+          color: #555;
+          font-weight: bold;
         }
       }
     }
@@ -518,6 +525,11 @@ footer {
       padding-left: 1.5rem;
       font-size: calc(0.9rem + 0.9vw);
       color: rgb(204, 175, 8);
+      transition: .3s ease;
+      &:hover{
+        transform: scale(1.1);
+        color:lighten( rgb(204, 175, 8), 50%);
+      }
     }
   }
   span {
@@ -1087,9 +1099,14 @@ footer {
       .right {
         form {
           font-size: calc(0.7rem + 0.6vw);
-
+          .fields{
+            display: block;
+          }
           input {
             font-size: calc(0.7rem + 0.6vw);
+          }
+          .email{
+            margin-left: 0;
           }
         }
         .textarea {
@@ -1141,6 +1158,9 @@ footer {
   // FREELANCE SERVICE
   .freelance-serv {
     .freelance-serv-content{
+      .left{
+        display: none;
+      }
       .right {
         .tech-stack {
           display: flex;
@@ -1149,7 +1169,8 @@ footer {
           padding-bottom: 1.5rem;
           text-align: center;
           flex-wrap: wrap;
-          gap: 4rem;
+          gap: 2rem;
+          
   
           img {
             width: 3rem;

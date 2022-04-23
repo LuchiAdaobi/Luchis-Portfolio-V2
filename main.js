@@ -1,19 +1,34 @@
 // BUTTON SCROLL ANIMATION FOR DIFFERENT SECTIONS
 let timeout;
 
-document.querySelector('.scrolly').addEventListener('click', () => {
-  clearTimeout(timeout);
+// document.querySelector('.scrolly').addEventListener('click', () => {
+//   clearTimeout(timeout);
 
-  // setTimeout(() => (location.hash = '#about'), 2000);
-  setTimeout(
-    () =>
-      window.scrollTo({
-        behavior: 'smooth',
-        top: document.querySelector('#about').getBoundingClientRect().top,
-      }),
-    1000
-  );
-});
+//   // setTimeout(() => (location.hash = '#about'), 2000);
+//   setTimeout(
+//     () =>
+//       window.scrollTo({
+//         behavior: 'smooth',
+//         top: document.querySelector('#about').getBoundingClientRect().top,
+//       }),
+//     1000
+//   );
+// });
+
+// document.querySelector('.right').addEventListener('click', () => {
+//   clearTimeout(timeout);
+
+//   // setTimeout(() => (location.hash = '#about'), 2000);
+//   setTimeout(
+//     () =>
+//       window.scrollTo({
+//         behavior: 'smooth',
+//         top: document.querySelector('freelance').getBoundingClientRect().top,
+//       }),
+//     1000
+//   );
+//   window.location.href = 'freelance.html';
+// });
 
 // NAV SCROLL
 $(document).ready(() => {
@@ -66,13 +81,9 @@ $('.carousel').owlCarousel({
 // TYPING ANIMATION
 const typed = new Typed('.typing', {
   strings: ['Developer', 'Freelancer'],
-  typespeed: 100,
-  backspeed: 60,
-  loop: true,
-});
-const typed2 = new Typed('.typing2', {
-  strings: ['Developer', 'Freelancer'],
-  typespeed: 100,
-  backspeed: 60,
+  typespeed: 876,
+  backspeed: 0,
+  backDelay: 3000,
+  startDelay: 0,
   loop: true,
 });
