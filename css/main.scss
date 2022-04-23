@@ -42,11 +42,11 @@ img {
 // SCROLL BTN
 .scroll-up-btn {
   position: fixed;
-  height: 2.5rem;
-  width: 2.4rem;
+  height: 2.4rem;
+  width: 2.5rem;
   background: $primary-color;
   right: 1.9rem;
-  bottom: 0.9rem;
+  bottom: .9rem;
   text-align: center;
   line-height: 2.8rem;
   color: #fff;
@@ -374,7 +374,7 @@ section {
 
 .contact {
   background-color: #fff;
-  color: $color-text;
+  color: #444;
   .max-width {
     text-align: center;
     margin: auto;
@@ -572,6 +572,14 @@ footer {
   }
 }
 // MEDIA QUERIES
+
+// PREFERS REDUCED MOTION
+@media (prefers-reduced-motion) {
+  .home {
+    
+    animation-name: dissolve;
+  }
+}
 
 @media (max-width: 1300px) {
   .home {
@@ -1181,5 +1189,9 @@ footer {
       }
     }
     
+  }
+  // FOOTER
+  footer{
+    padding-bottom: 4.5rem;
   }
 }
