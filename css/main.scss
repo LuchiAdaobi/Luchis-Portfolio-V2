@@ -128,7 +128,7 @@ img {
       animation: bottomToTop 1.4s ease;
       scroll-behavior: smooth;
       transition: 0.3s ease;
-      color: #111;
+      // color: #111;
     }
 
     .right {
@@ -220,9 +220,9 @@ section {
           border-radius: 1.2rem;
           overflow: hidden;
           transition: .3s ease;
-          &:hover{
-            transform: scale(1.05);
-          }
+          // &:hover{
+          //   transform: scale(1.05);
+          // }
         
       }
     }
@@ -576,8 +576,7 @@ footer {
 
 // PREFERS REDUCED MOTION
 @media (prefers-reduced-motion) {
-  .home {
-    
+  .animation {
     animation-name: dissolve;
   }
 }

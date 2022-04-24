@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luchi's Portfolio</title>
+    
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" defer />
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
@@ -16,7 +19,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" defer/>
+    <script src="sharp.js" defer ></script>
     <script src="main.js" defer ></script>
 </head>
 <body>
@@ -28,7 +31,7 @@
 
     <section class="home" id="home">
         <div class="max-width">
-            <div class="home-content">
+            <div class="home-content animation">
                 <div class="smiley"><i class="fa-regular fa-face-smile"></i></div>
                 <div class="text-1">Hello there, my name is</div>
                 <div class="text-2">Luchi</div>
@@ -36,15 +39,15 @@
                 <div class="subtitle">
                     <p>Please have a look around, see what I've been up to, <br>
                     and let's see what we can build together. </p></div>
-                <a href="index.html#about" class="dev">I need a dev</a>
-                <a href="#about" class="right scrolly">I need a site</a>
+                <a href="index.html#about" class="dev animation">I need a dev</a>
+                <a href="#freelance" class="right animation">I need a site</a>
             </div>
         </div>
     </section>
 
     <!--    WEB PRESENCE SECTION -->
 
-    <section class="about" id="about">
+    <section class="about" id="freelance">
         <div class="max-width">
             <h4 class="title">Is Your Web Presence Producing The Outcome You Desire?</h4>
             <div class="line"></div>
@@ -67,51 +70,51 @@
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
-                        <a href="https://build-inc-fitness.netlify.app/" target="_blank"><img src="/images/build.inc.webp" alt="screenshot of build.inc website"></a>
+                        <a href="https://build-inc-fitness.netlify.app/" target="_blank"><img src="/images/build.inc (2).webp" alt="screenshot of build.inc website"></a>
                         
                        
                     </div>
                     <div class="work-desc">
                         <div class="text">Build.Inc Fitness</div>
                         <p>Getting you fit. A fully responsive, beautiful, and modern website for a gym startup.</p>
-                        <a href="https://build-inc-fitness.netlify.app/" target="_blank" class="btn btn-secondary">View</a>  
+                        <a href="https://build-inc-fitness.netlify.app/" target="_blank" class="btn btn-secondary animation">View</a>  
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="box">
-                        <a href="https://hilton-hammel-real-estate.netlify.app/" target="_blank"><img src="/images/hilton.hammel.webp" alt="screenshot of website"></a>
+                        <a href="https://hilton-hammel-real-estate.netlify.app/" target="_blank"><img src="/images/hilton.hammel (2).webp" alt="screenshot of website"></a>
                         
                        
                     </div>
                     <div class="work-desc">
                         <div class="text">Hilton Hammel Real Estate</div>
                         <p>A fully responsive, beautiful website for a real estate business.</p>
-                        <a href="https://hilton-hammel-real-estate.netlify.app/" class="btn btn-secondary" target="_blank" >View</a>  
+                        <a href="https://hilton-hammel-real-estate.netlify.app/" class="btn btn-secondary animation" target="_blank" >View</a>  
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="box">
-                        <a href="https://philbanks-consulting.netlify.app/" target="_blank"><img src="/images/phil.consulting.webp" alt="screenshot of website"></a>
+                        <a href="https://philbanks-consulting.netlify.app/" target="_blank"><img src="/images/phil.consulting (2).webp" alt="screenshot of website"></a>
                     </div>
                     <div class="work-desc">
                         <div class="text">Philbanks-Consulting</div>
                         <p>We support financial literacy. A modern, fully responsive landing page for a financial consulting business.</p>
-                        <a href="https://philbanks-consulting.netlify.app/" class="btn btn-secondary" target="_blank">View</a>  
+                        <a href="https://philbanks-consulting.netlify.app/" class="btn btn-secondary animation" target="_blank">View</a>  
                     </div>
                 </div>
                 
                 <div class="card">
                     <div class="box">
-                        <a href="https://fitwelllive.netlify.app/" target="_blank"><img src="/images/fit.well.live.webp" alt="screenshot of website"></a>
+                        <a href="https://fitwelllive.netlify.app/" target="_blank"><img src="/images/fit.well.live (2).webp" alt="screenshot of website"></a>
                         
                        
                     </div>
                     <div class="work-desc">
                         <div class="text">Fit.Well.Live</div>
                         <p>Bringing some sass to fitness. A fully responsive, clean, beautiful landing page for a female focused fitness business.</p>
-                        <a href="https://fitwelllive.netlify.app/" target="_blank" >View</a>  
+                        <a href="https://fitwelllive.netlify.app/" target="_blank" class="btn btn-secondary animation">View</a>  
                     </div>
                 </div>
                 <div class="card">
@@ -123,7 +126,7 @@
                     <div class="work-desc">
                         <div class="text">Tranquil</div>
                         <p>A fully responsive meditation app</p>
-                        <a href="#"target="_blank" >View</a>  
+                        <a href="#"target="_blank" class="btn btn-secondary animation">View</a>  
                     </div>
                 </div>
                 <!-- <div class="card">
@@ -135,7 +138,7 @@
                     <div class="work-desc">
                         <div class="text">ShopaBee</div>
                         <p>A fully responsive, beautiful, ecommerce webise (tools & technologies used).</p>
-                        <a href=""target="_blank" >View</a>  
+                        <a href=""target="_blank" class="btn btn-secondary animation">View</a>  
                     </div>
                 </div>
                 <div class="card">
@@ -146,7 +149,7 @@
                     <div class="work-desc">
                         <div class="text">House & Keys</div>
                         <p>A fully responsive, beautiful, and modern real estate web app (tools & technologies used).</p>
-                        <a href="" target="_blank" >View</a>  
+                        <a href="" target="_blank" class="btn btn-secondary animation">View</a>  
                     </div>
                 </div>
                 <div class="card">
@@ -157,7 +160,7 @@
                     <div class="work-desc">
                         <div class="text">Search</div>
                         <p>A fully responsive, beautiful, and modern search app.</p>
-                        <a href="" target="_blank" >View</a>  
+                        <a href="" target="_blank" class="btn btn-secondary animation">View</a>  
                     </div>
                 </div>
                 <div class="card">
@@ -168,7 +171,7 @@
                     <div class="work-desc">
                         <div class="text">Spoon Bites</div>
                         <p>A fully responsive, beautiful, and modern restaurant Web app.</p>
-                        <a href="" target="_blank">View</a>  
+                        <a href="" target="_blank"class="btn btn-secondary animation" >View</a>  
                     </div> -->
                 </div>
 
@@ -222,7 +225,7 @@
             
             <!-- Creating elegant, accessible and innovative solutions to problems is a passion of mine. -->
 
-            <p class="second">When I'm not coding, I can be found doodling or making designs on paper, dreaming up fantastical worlds, reading a book, taking walks, or breaking into random dance sessions (I don't think I'm very good though <span><img src="images/smiley.webp" alt="smiley"></span>).</p>
+            <p class="second">When I'm not coding, I can be found doodling or making designs on paper, dreaming up fantastical worlds, reading a book, taking walks, or breaking into random dance sessions (I don't think I'm very good though <span><img src="images/smiley (2).webp" alt="smiley"></span>).</p>
         </div>  
         </div>
     </div>
@@ -290,9 +293,9 @@
 
 <footer>
     <div class="social-links">
-        <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-        <a href="mailto:luchichronicles@gmail.com" target="_top"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://github.com/LuchiAdaobi"><i class="fa-brands fa-github"></i></a>
+        <a href="https://twitter.com/home"><i class="fab fa-twitter animation"></i></a>
+        <a href="mailto:luchichronicles@gmail.com" target="_top"><i class="fa-solid fa-envelope animation"></i></a>
+        <a href="https://github.com/LuchiAdaobi"><i class="fa-brands fa-github animation"></i></a>
     </div>
     <span>Created By <a href="#">@codingLuchi</a> | <span> &copy; </span> 2022</span>
 </footer>

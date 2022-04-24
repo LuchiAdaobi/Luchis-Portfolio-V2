@@ -1,5 +1,5 @@
 {
-  "name": "luchi's_portfolio_v1",
+  "name": "clear",
   "version": "1.0.0",
   "description": "This is version one of my porfolio site.",
   "main": "main.js",
@@ -31,6 +31,15 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
+    "sharp": "^0.30.4",
     "typed.js": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuchiAdaobi/Luchi-s-Portfolio-V1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuchiAdaobi/Luchi-s-Portfolio-V1/issues"
+  },
+  "homepage": "https://github.com/LuchiAdaobi/Luchi-s-Portfolio-V1#readme"
 }
