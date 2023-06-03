@@ -26,7 +26,7 @@ $(document).ready(() => {
 
 // TYPING ANIMATION
 const typed = new Typed('.typing', {
-  strings: ['Developer', 'Freelancer'],
+  strings: ['Developer', 'Technical Writer'],
   typeSpeed: 100,
   backSpeed: 0,
   backDelay: 3000,
